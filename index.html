@@ -28,8 +28,10 @@ h2{font:700 28px/1.1 'Barlow Condensed',sans-serif;text-transform:uppercase;marg
 .marco{background:var(--panel);border:1px solid var(--linea);border-radius:12px;padding:12px}
 .marco b{display:block;font:600 13px/1 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--suave);margin:2px 0 10px}
 .marco img{width:100%;display:block;border-radius:6px}
-.cel{max-width:360px;margin:0 auto;border:10px solid #1b1b1b;border-radius:34px;overflow:hidden;max-height:760px;overflow-y:auto}
-.cel img{border-radius:0}
+.cel{width:100%;max-width:375px;margin:0 auto;border:10px solid #1b1b1b;border-radius:34px;overflow:hidden;background:#fff}
+iframe{display:block;border:0;width:100%}
+iframe.pc{height:1600px;border-radius:6px;background:#eceae6}
+iframe.movil{height:740px}
 .panel{background:var(--panel);border:1px solid var(--linea);border-radius:12px;padding:18px 20px}
 .dos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .mini{font-size:14px;color:var(--suave)}
@@ -58,7 +60,7 @@ footer{padding:30px 0 40px;color:var(--suave);font-size:13px}
   <p>Propuesta para aprobar antes de programarlo en Constant Contact. Se muestra cómo se ve el correo en computador y en celular, a quién se envía, por qué y de dónde salen los destinatarios.</p>
   <dl class="tarjetas">
     <div class="t"><dt>Destinatarios</dt><dd>1.023<small>correos de la zona de Dallas que se pueden contactar</small></dd></div>
-    <div class="t"><dt>Envío propuesto</dt><dd>Hoy 4 pm<small>hora de Dallas (alternativa: jueves 8-oct, 10 am)</small></dd></div>
+    <div class="t"><dt>Envío propuesto</dt><dd>Hoy 2 pm<small>hora de Dallas, si se aprueba antes de la 1:15 pm (si no: jueves 8-oct, 10 am)</small></dd></div>
     <div class="t"><dt>Prueba A/B</dt><dd>2 asuntos<small>Constant Contact envía el ganador al resto</small></dd></div>
     <div class="t"><dt>Botón</dt><dd>Directo al pago<small>abre la página en la sección de registro</small></dd></div>
   </dl>
@@ -68,10 +70,10 @@ footer{padding:30px 0 40px;color:var(--suave);font-size:13px}
 
 <section>
   <h2>Cómo se ve</h2>
-  <p class="lead">La mayoría de los padres abre el correo en el celular. El diseño es de una sola columna, con letra grande y el botón fácil de tocar.</p>
+  <p class="lead">La mayoría de los padres abre el correo en el celular. El diseño es de una sola columna, con letra grande y el botón fácil de tocar. <b>Las dos vistas son el correo real: al hacer clic en el botón "Register your player" (o en "Inscríbelo aquí") se abre, en una pestaña nueva, la página de Dallas tal como la vería el padre.</b></p>
   <div class="vistas">
-    <div class="marco"><b>Computador</b><img src="img/vista_pc.jpg" alt="Vista del email en computador"></div>
-    <div class="marco"><b>Celular (se puede desplazar)</b><div class="cel"><img src="img/vista_celular.jpg" alt="Vista del email en celular"></div></div>
+    <div class="marco"><b>Computador</b><iframe class="pc" src="email.html" title="Email en computador" loading="lazy"></iframe></div>
+    <div class="marco"><b>Celular (se puede desplazar dentro del teléfono)</b><div class="cel"><iframe class="movil" src="email.html" title="Email en celular" loading="lazy"></iframe></div></div>
   </div>
 </section>
 
